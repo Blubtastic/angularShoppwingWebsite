@@ -1,0 +1,85 @@
+{
+  "_id": {
+    "$oid": "5a0a01f42ce6de365aec27ac"
+  },
+  "username": "Frank",
+  "email": "frank@user.com",
+  "password": "$2a$10$/ROJSSGq4bl2lDGMMMx/PeaNssZxLVZDzZknRmQVFnY5GeYg6MPZG",
+  "role": "user",
+  "img": "http://www.fillmurray.com/200/200",
+  "age": 25,
+  "products": [{
+    "$oid": "5a0a02062ce6de365aec27ad"
+  }, {
+    "$oid": "5a0a02122ce6de365aec27ae"
+  }, {
+    "$oid": "5a0a02212ce6de365aec27af"
+  }, {
+    "$oid": "5a0a023d2ce6de365aec27b0"
+  }, {
+    "$oid": "5a0a02462ce6de365aec27b1"
+  }, {
+    "$oid": "5a0a02562ce6de365aec27b2"
+  }],
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a02792ce6de365aec27b3"
+  },
+  "username": "Jessica",
+  "email": "jessica@admin.com",
+  "password": "$2a$10$3T74ltEcsGvJBKKGbGpl6Oy47GtNHEh.EaXTUTFA4CLPD0voI.zYK",
+  "role": "admin",
+  "img": "http://www.fillmurray.com/300/300",
+  "age": 48,
+  "products": [{
+    "$oid": "5a0a02962ce6de365aec27b4"
+  }, {
+    "$oid": "5a0a02a12ce6de365aec27b5"
+  }, {
+    "$oid": "5a0a02b12ce6de365aec27b6"
+  }],
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a02f62ce6de365aec27b7"
+  },
+  "username": "Paul",
+  "email": "paul@user.com",
+  "password": "$2a$10$J1Bh5LZkgAuOC8LGLZ.RtOcBZeiG9iGtA/mNLBZCi4q3CmIfsP8XK",
+  "role": "user",
+  "img": "http://www.fillmurray.com/200/200",
+  "age": 30,
+  "products": [{
+    "$oid": "5a0a03292ce6de365aec27b8"
+  }, {
+    "$oid": "5a0a033d2ce6de365aec27b9"
+  }, {
+    "$oid": "5a0a03492ce6de365aec27ba"
+  }, {
+    "$oid": "5a0a03612ce6de365aec27bb"
+  }, {
+    "$oid": "5a0a03792ce6de365aec27bc"
+  }, {
+    "$oid": "5a0a03862ce6de365aec27bd"
+  }],
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a03ab2ce6de365aec27be"
+  },
+  "username": "Jane",
+  "email": "jane@user.com",
+  "password": "$2a$10$txAT0zPIycre1lAo45fNQuIW.YG2v5wX6k2jqCCFX68lsRfXwlbXK",
+  "role": "user",
+  "img": "http://www.fillmurray.com/400/400",
+  "age": 22,
+  "products": [{
+    "$oid": "5a0a03c12ce6de365aec27bf"
+  }, {
+    "$oid": "5a0a03e32ce6de365aec27c0"
+  }, {
+    "$oid": "5a0a03f22ce6de365aec27c1"
+  }],
+  "__v": 0
+}

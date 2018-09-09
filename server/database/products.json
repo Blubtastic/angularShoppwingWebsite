@@ -1,0 +1,253 @@
+{
+  "_id": {
+    "$oid": "5a0a02062ce6de365aec27ad"
+  },
+  "name": "Frank's chair",
+  "description": "good chair",
+  "price": 1000,
+  "user": {
+    "$oid": "5a0a01f42ce6de365aec27ac"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:35:18.824Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a02122ce6de365aec27ae"
+  },
+  "name": "table",
+  "description": "nice table",
+  "price": 900,
+  "user": {
+    "$oid": "5a0a01f42ce6de365aec27ac"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:35:30.484Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a02212ce6de365aec27af"
+  },
+  "name": "bed",
+  "description": "pink bed",
+  "price": 825,
+  "user": {
+    "$oid": "5a0a01f42ce6de365aec27ac"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:35:45.608Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a023d2ce6de365aec27b0"
+  },
+  "name": "calculator",
+  "description": "from 2000",
+  "price": 1900,
+  "user": {
+    "$oid": "5a0a01f42ce6de365aec27ac"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:36:13.313Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a02462ce6de365aec27b1"
+  },
+  "name": "old book",
+  "description": "very old",
+  "price": 2000,
+  "user": {
+    "$oid": "5a0a01f42ce6de365aec27ac"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:36:22.240Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a02562ce6de365aec27b2"
+  },
+  "name": "Frank's soul",
+  "description": "My own soul.",
+  "price": 999999,
+  "user": {
+    "$oid": "5a0a01f42ce6de365aec27ac"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:36:38.721Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a02962ce6de365aec27b4"
+  },
+  "name": "Pen",
+  "description": "cheap",
+  "price": 2,
+  "user": {
+    "$oid": "5a0a02792ce6de365aec27b3"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:37:42.806Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a02a12ce6de365aec27b5"
+  },
+  "name": "lamp",
+  "description": "super bright lamp",
+  "price": 25,
+  "user": {
+    "$oid": "5a0a02792ce6de365aec27b3"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:37:53.531Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a02b12ce6de365aec27b6"
+  },
+  "name": "haircut",
+  "description": "Student haircut",
+  "price": 200,
+  "user": {
+    "$oid": "5a0a02792ce6de365aec27b3"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:38:09.334Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a03292ce6de365aec27b8"
+  },
+  "name": "my hair",
+  "description": "brown",
+  "price": 600,
+  "user": {
+    "$oid": "5a0a02f62ce6de365aec27b7"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:40:09.267Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a033d2ce6de365aec27b9"
+  },
+  "name": "my roomie's hair",
+  "description": "blonde",
+  "price": 900,
+  "user": {
+    "$oid": "5a0a02f62ce6de365aec27b7"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:40:29.166Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a03492ce6de365aec27ba"
+  },
+  "name": "paint",
+  "description": "yellow, 40l",
+  "price": 40,
+  "user": {
+    "$oid": "5a0a02f62ce6de365aec27b7"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:40:41.334Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a03612ce6de365aec27bb"
+  },
+  "name": "iPaid",
+  "description": "Actually I did not pay. My dad did.",
+  "price": 14000,
+  "user": {
+    "$oid": "5a0a02f62ce6de365aec27b7"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:41:05.297Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a03792ce6de365aec27bc"
+  },
+  "name": "magnets",
+  "description": "for kitchen",
+  "price": 30,
+  "user": {
+    "$oid": "5a0a02f62ce6de365aec27b7"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:41:29.913Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a03862ce6de365aec27bd"
+  },
+  "name": "table",
+  "description": "the cheapest on this site",
+  "price": 1,
+  "user": {
+    "$oid": "5a0a02f62ce6de365aec27b7"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:41:42.569Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a03c12ce6de365aec27bf"
+  },
+  "name": "makeup",
+  "description": "L'oreal",
+  "price": 800,
+  "user": {
+    "$oid": "5a0a03ab2ce6de365aec27be"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:42:41.897Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a03e32ce6de365aec27c0"
+  },
+  "name": "My house",
+  "description": "40m^2 with garden",
+  "price": 10000000,
+  "user": {
+    "$oid": "5a0a03ab2ce6de365aec27be"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:43:15.575Z"
+  },
+  "__v": 0
+} {
+  "_id": {
+    "$oid": "5a0a03f22ce6de365aec27c1"
+  },
+  "name": "wall",
+  "description": "tight wall",
+  "price": 20000,
+  "user": {
+    "$oid": "5a0a03ab2ce6de365aec27be"
+  },
+  "createdAt": {
+    "$date": "2017-11-13T20:43:30.815Z"
+  },
+  "__v": 0
+}

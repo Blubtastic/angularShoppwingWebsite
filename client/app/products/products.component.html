@@ -1,0 +1,136 @@
+<app-loading [condition]="isLoading"></app-loading>
+<app-toast [message]="toast.message"></app-toast>
+
+
+<!-- PRODUCT COMPONENT _________________________________________________________ -->
+<div class="productsPage largeBottomMargin" *ngIf="!isLoading">
+  <div class="topBar">
+    <div class="productsHeaderTitle">
+      <h1 class="centerText ">BestProducts Shopping</h1>
+      <h5 class="centerText">Sell or buy stuff..</h5>
+    </div>
+    <app-create-product (productAdded)="handleProductAdded($event);"></app-create-product>
+  </div>
+  <div class="productPageContent largeBottomMargin">
+    <!-- <h3 class="centerText smallBottomMargin">Products</h3> -->
+
+
+    <!-- Search component -->
+    <div class="form-inline">
+      <!-- name search -->
+      <div class="searchFields mediumBottomMargin">
+        <input
+        class="form-control"
+        placeholder="Search for a name"
+        [(ngModel)]="query"
+        (ngModelChange)="changedQuery(query)"
+        (keyup.enter)="changedQuery(query)"
+        type="text"
+        >
+        <!-- min search -->
+        <input
+        class="form-control price"
+        type="number"
+        min="0"
+        step="100"
+        placeholder="min price"
+        [(ngModel)]="minPrice"
+        (ngModelChange)="changedMinPrice(minPrice)"
+        (keyup.enter)="changedMinPrice(minPrice)"
+        >
+        <!-- max search -->
+        <input
+        class="form-control price"
+        type="number"
+        min="0"
+        step="100"
+        placeholder="max price"
+        [(ngModel)]="maxPrice"
+        (ngModelChange)="changedMaxPrice(maxPrice)"
+        (keyup.enter)="changedMaxPrice(maxPrice)"
+        >
+
+        <!-- Category filter. works outside of search, should be separated -->
+        <select class="form-control"  [(ngModel)]="selectedCategory" (ngModelChange)="changedSelection(selectedCategory)">
+          <option selected value="default" >--Select a category--</option>
+          <option *ngFor="let c of categories" [ngValue]="c">{{c}}</option>
+        </select>
+
+        <!-- <button class="inputBtn"(click)="changedQuery(query)">Search <i class="fa fa-search"></i></button> -->
+        <button class="inputBtn darkBg" (click)="clearFilter()">Clear filter <i class="fa fa-times"></i></button>
+      </div>
+    </div>
+
+    <div class="productsAllComponents">
+      <div class="horizontalScroll productsColumn">
+
+
+        <!-- PRODUCT LIST -->
+        <table class="table table-bordered table-striped mediumBottomMargin">
+          <thead class="thead-default">
+            <tr>
+              <!-- name, not selected -->
+              <th *ngIf="!nameSelected" class="clickable" (click)="sortBy('name'); toggleNameSort()">NAME
+                <i *ngIf="!ascName" class="fa fa-chevron-up" aria-hidden></i>
+                <i *ngIf="ascName" class="fa fa-chevron-down" aria-hidden></i>
+              </th>
+              <!-- name, selected -->
+              <th *ngIf="nameSelected" class="clickable bgOrange" (click)="sortBy('name'); toggleNameSort()">NAME
+                <i *ngIf="!ascName" class="fa fa-chevron-up" aria-hidden></i>
+                <i *ngIf="ascName" class="fa fa-chevron-down" aria-hidden></i>
+              </th>
+              <!-- price, not selected -->
+              <th *ngIf="!priceSelected" class="clickable" (click)="sortBy('price'); togglePriceSort()">PRICE
+                <i *ngIf="!ascPrice" class="fa fa-chevron-up" aria-hidden></i>
+                <i *ngIf="ascPrice" class="fa fa-chevron-down" aria-hidden></i>
+              </th>
+              <!-- price, selected -->
+              <th *ngIf="priceSelected" class="clickable bgOrange" (click)="sortBy('price'); togglePriceSort()">PRICE
+                <i *ngIf="!ascPrice" class="fa fa-chevron-up" aria-hidden></i>
+                <i *ngIf="ascPrice" class="fa fa-chevron-down" aria-hidden></i>
+              </th>
+            </tr>
+          </thead>
+          <tbody *ngIf="products.length === 0">
+            <tr>
+              <td colspan="4">There are no products for this filter. Add a new product above.</td>
+            </tr>
+          </tbody>
+          <app-loading [condition]="isLoadingDynamic"></app-loading>
+          <tbody *ngIf="!isLoadingDynamic">
+            <tr *ngFor="let product of products" (click)="updateStyle($event); updateDetailView(product)"> <!-- Generates a tr for each product in the db. -->
+              <td>{{product.name}}</td>
+              <td>{{product.price}} kr</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Pagination component -->
+        <div *ngIf="!hidePagination">
+        <app-pagination
+          (goPage)="goToPage($event)"
+          (goNext)="onNext()"
+          (goPrev)="onPrev()"
+          [pagesToShow]="totalPageNum"
+          [page]="pageNum"
+          [perPage]="listingsPerPage"
+          [count]="totalListings"></app-pagination>
+        </div>
+      </div>
+
+
+      <!-- GOOGLE MAPS + card details (right column)________________________ -->
+      <div class="rightColumn">
+        <!-- Product details card -->
+        <app-product-details (productDeleted)="handleProductDeleted($event)"
+        (productEdited)="handleProductEdited($event)"
+        (hideProductDetails)="handleHideProductDetails($event)"
+        *ngIf="displayProductDetails" [authenticated]="authenticated" [product]="productDetails.product" class="detailsCard"></app-product-details>
+        <!-- Google maps Map -->
+        <h4 *ngIf="!displayProductDetails" class="centerText">Map of User Locations</h4>
+        <app-google-maps></app-google-maps>
+      </div>
+
+    </div>
+  </div>
+</div>

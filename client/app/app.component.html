@@ -1,0 +1,38 @@
+<!-- This is the HTML root, so the content of this file is always shown. -->
+<div>
+  <!-- NavBar -->
+  <nav class="navbar navbar-dark">
+    <div class="nav navbar-nav">
+      <!-- Normal pages -->
+      <a routerLink="/" [routerLinkActiveOptions]="{exact:
+true}" class="nav-item nav-link" routerLinkActive="active">
+        <i class="fa fa-home"></i> Home
+      </a>
+
+      <div class="flexSpacer"></div>
+
+      <!-- User/login pages -->
+      <a routerLink="/login" class="nav-item nav-link " routerLinkActive="active" *ngIf="!auth.loggedIn">
+        <i class="fa fa-sign-in"></i> Login
+      </a>
+      <a routerLink="/register" class="nav-item nav-link " routerLinkActive="active" *ngIf="!auth.loggedIn">
+        <i class="fa fa-user-plus"></i> Register
+      </a>
+      <a routerLink="/myPage" class="nav-item nav-link " routerLinkActive="active" *ngIf="auth.loggedIn">
+        <i class="fa fa-user"></i> My page
+      </a>
+      <a routerLink="/admin" class="nav-item nav-link " routerLinkActive="active" *ngIf="auth.loggedIn && auth.isAdmin">
+        <i class="fa fa-lock"></i> Admin
+      </a>
+      <a routerLink="/logout" class="nav-item nav-link " routerLinkActive="active" *ngIf="auth.loggedIn">
+        <i class="fa fa-sign-out"></i> Logout
+      </a>
+    </div>
+  </nav>
+  <div class="container">
+    <!-- The output from the router (the selected component based on the URL) is put here.
+    This is the actual content of the page. -->
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

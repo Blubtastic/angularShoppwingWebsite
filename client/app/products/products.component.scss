@@ -1,0 +1,46 @@
+
+.topBar{
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  background-color: #eee;
+  padding-bottom: 10px;
+}
+
+.productPageContent{
+  position: relative;
+  top: 260px;
+}
+.productsHeaderTitle{
+  padding: 30px 0;
+  color: #333;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+app-google-maps {
+  flex-grow: 1;
+  height: 0
+}
+.searchFields{
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  input{
+    flex: 1;
+    min-width: 160px;
+  }.price{
+    min-width: 110px !important;
+  }select{
+    min-width: 150px;
+    margin-bottom: 0px; // had bottom margin for some reason
+    flex: 2;
+    height: 100%;
+  }button{
+    flex: 1;
+    min-width: 120px;
+    padding: 0 12px;
+    margin: 0 3%;
+  }
+}
